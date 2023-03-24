@@ -1,0 +1,21 @@
+h3 {
+  text-align: center;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+}
+
+.current-weather-details {
+  text-align: center;
+  list-style-type: none;
+}
+
+#city-name {
+  text-transform: capitalize;
+}
+
+#weather-dedcription {
+  text-transform: capitalize;
+}
