@@ -11,3 +11,8 @@ h2{
   margin-bottom: 10px;
   margin-left: 150px;
 }
+
+#github-link{
+  display: block;
+  text-align: center;
+}

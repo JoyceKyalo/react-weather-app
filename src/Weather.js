@@ -20,7 +20,6 @@ export default function Weather() {
 
   function handleResponse(response) {
     setLoaded(true);
-
     setWeatherDetails({
       temperature: response.data.main.temp,
       description: response.data.weather[0].description,
