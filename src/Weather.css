@@ -1,7 +1,3 @@
-h3 {
-  text-align: center;
-}
-
 .search-form {
   display: flex;
   justify-content: center;
@@ -10,10 +6,6 @@ h3 {
 .current-weather-details {
   text-align: center;
   list-style-type: none;
-}
-
-#city-name {
-  text-transform: capitalize;
 }
 
 #weather-dedcription {

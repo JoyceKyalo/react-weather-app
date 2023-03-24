@@ -40,10 +40,12 @@ export default function Weather() {
     return (
       <div>
         <div>{searchForm}</div>
-        <h3>Weather details for <span id="city-name">{city}</span>:</h3>
         <ul className="current-weather-details">
           <li>Temperature: {Math.round(weatherDetails.temperature)}°C</li>
-          <li>Description: <span id="weather-description">{weatherDetails.description}</span></li>
+          <li>
+            Description:{" "}
+            <span id="weather-description">{weatherDetails.description}</span>
+          </li>
           <li>
             <img src={weatherDetails.icon} alt={weatherDetails.icon} />
           </li>
