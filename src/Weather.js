@@ -29,8 +29,8 @@ export default function Weather() {
   let searchForm = (
     <div className="search-form">
       <form onSubmit={handleSubmit}>
-        <input type="search" placeholder="Enter a city" onChange={updateCity} />
-        <button>Search</button>
+        <input type="search" placeholder="Enter a city" autoFocus onChange={updateCity} />
+        <input type="submit" value="Search" />
       </form>
     </div>
   );
