@@ -1,4 +1,8 @@
 a{
-    color: antiquewhite;
+    color: #FF8400;
     text-decoration: none;
+}
+
+a:hover{
+    color: #faebd7;
 }

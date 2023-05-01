@@ -18,7 +18,7 @@ export default function WeatherInfo(props) {
               <a href="/">Shanghai</a>
             </div>
           </div>
-          <h1>{props.displayCity}</h1>
+          <h1>{props.details.city}</h1>
           <UserDate date={props.details.date} />
         </div>
         <div className="col-6">
@@ -26,7 +26,7 @@ export default function WeatherInfo(props) {
             <li>Temperature: {Math.round(props.details.temperature)}°C</li>
             <li>
               Description:{" "}
-              <span id="weather-description">{props.details.description}</span>
+              <span id="weather-description" className="text-capitalize">{props.details.description}</span>
             </li>
             <li>
               <img src={props.details.icon} alt={props.details.icon} />

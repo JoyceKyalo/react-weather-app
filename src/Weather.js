@@ -44,10 +44,8 @@ export default function Weather(props) {
               <input type="submit" value="Search" />
             </form>
           </div>
-          
         </div>
-
-        <WeatherInfo details={weatherDetails} displayCity={props.defaultCity} />
+        <WeatherInfo details={weatherDetails} />
       </div>
     );
   } else {
