@@ -29,7 +29,12 @@ export default function Weather() {
   let searchForm = (
     <div className="search-form">
       <form onSubmit={handleSubmit}>
-        <input type="search" placeholder="Enter a city" autoFocus onChange={updateCity} />
+        <input
+          type="search"
+          placeholder="Enter a city"
+          autoFocus
+          onChange={updateCity}
+        />
         <input type="submit" value="Search" />
       </form>
     </div>
@@ -38,7 +43,21 @@ export default function Weather() {
   if (loaded) {
     return (
       <div>
+        <div className="col-6">
+        <div className="row common-cities">
+          <div class="col-3">
+            <a href="/">New York</a>
+          </div>
+          <div class="col-3 paris-city">
+            <a href="/">Paris</a>
+          </div>
+          <div class="col-6">
+            <a href="/">Shanghai</a>
+          </div>
+        </div>
+        </div>
         <div>{searchForm}</div>
+
         <ul className="current-weather-details">
           <li>Temperature: {Math.round(weatherDetails.temperature)}°C</li>
           <li>
