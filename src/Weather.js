@@ -1,11 +1,11 @@
 import React, { useState } from "react";
+import UserDate from "./UserDate";
 import "./Weather.css";
 import axios from "axios";
 
-export default function Weather() {
-  let [city, setCity] = useState("");
-  let [loaded, setLoaded] = useState(false);
-  let [weatherDetails, setWeatherDetails] = useState({});
+export default function Weather(props) {
+  let [city, setCity] = useState(props.defaultCity);
+  let [weatherDetails, setWeatherDetails] = useState({ ready: false});
 
   function updateCity(event) {
     setCity(event.target.value);
@@ -19,11 +19,14 @@ export default function Weather() {
   }
 
   function handleResponse(response) {
-    setLoaded(true);
+   
     setWeatherDetails({
+      ready: true,
       temperature: response.data.main.temp,
       description: response.data.weather[0].description,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      date: new Date(response.data.dt * 1000),
+      city: response.data.name
     });
   }
   let searchForm = (
@@ -40,25 +43,24 @@ export default function Weather() {
     </div>
   );
 
-  if (loaded) {
+  if (weatherDetails.ready) {
     return (
       <div>
         <div className="row">
           <div className="col-6">
             <div className="row common-cities">
-              <div class="col-3">
+              <div class="col-4">
                 <a href="/">New York</a>
               </div>
               <div class="col-3 paris-city">
                 <a href="/">Paris</a>
               </div>
-              <div class="col-6">
+              <div class="col-5">
                 <a href="/">Shanghai</a>
               </div>
             </div>
-            <div>Nairobi, KE</div>
-            <div>Monday 16:54</div>
-            <div>Cloudy</div>
+            <UserDate date={weatherDetails.date} />
+            
           </div>
           <div className="col-6">
             <div>{searchForm}</div>
@@ -79,6 +81,9 @@ export default function Weather() {
       </div>
     );
   } else {
-    return <div>{searchForm}</div>;
+    let apiKey = "2d5c28f46f35496c26b3294dfcae8329";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
+    return <div>Loading</div>;
   }
 }
