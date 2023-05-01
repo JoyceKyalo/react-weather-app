@@ -1,4 +1,5 @@
 import React from "react";
+import "./WeatherInfo.css";
 import UserDate from "./UserDate";
 
 export default function WeatherInfo(props) {
