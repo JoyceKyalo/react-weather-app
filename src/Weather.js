@@ -43,31 +43,39 @@ export default function Weather() {
   if (loaded) {
     return (
       <div>
-        <div className="col-6">
-        <div className="row common-cities">
-          <div class="col-3">
-            <a href="/">New York</a>
+        <div className="row">
+          <div className="col-6">
+            <div className="row common-cities">
+              <div class="col-3">
+                <a href="/">New York</a>
+              </div>
+              <div class="col-3 paris-city">
+                <a href="/">Paris</a>
+              </div>
+              <div class="col-6">
+                <a href="/">Shanghai</a>
+              </div>
+            </div>
+            <div>Nairobi, KE</div>
+            <div>Monday 16:54</div>
+            <div>Cloudy</div>
           </div>
-          <div class="col-3 paris-city">
-            <a href="/">Paris</a>
-          </div>
-          <div class="col-6">
-            <a href="/">Shanghai</a>
+          <div className="col-6">
+            <div>{searchForm}</div>
+            <ul className="current-weather-details">
+              <li>Temperature: {Math.round(weatherDetails.temperature)}°C</li>
+              <li>
+                Description:{" "}
+                <span id="weather-description">
+                  {weatherDetails.description}
+                </span>
+              </li>
+              <li>
+                <img src={weatherDetails.icon} alt={weatherDetails.icon} />
+              </li>
+            </ul>
           </div>
         </div>
-        </div>
-        <div>{searchForm}</div>
-
-        <ul className="current-weather-details">
-          <li>Temperature: {Math.round(weatherDetails.temperature)}°C</li>
-          <li>
-            Description:{" "}
-            <span id="weather-description">{weatherDetails.description}</span>
-          </li>
-          <li>
-            <img src={weatherDetails.icon} alt={weatherDetails.icon} />
-          </li>
-        </ul>
       </div>
     );
   } else {
