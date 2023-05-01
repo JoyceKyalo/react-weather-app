@@ -8,6 +8,27 @@
   list-style-type: none;
 }
 
-#weather-dedcription {
-  text-transform: capitalize;
+.search-space {
+  border: 1px solid black;
+  border-radius: 7px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 8px;
+  margin-right: 20px;
+}
+
+.search-button {
+  color: #faebd7;
+  background-color: #0c0909;
+  border: 1px solid #0c0909;
+  border-radius: 7px;
+  padding: 3px 8px 3px 8px;
+  transition: all 200ms ease-in-out;
+}
+
+.search-button:hover {
+  color: #0c0909;
+  background-color: #faebd7;
+  border: 1px solid #0c0909;
+ 
 }

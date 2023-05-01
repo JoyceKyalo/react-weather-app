@@ -1,6 +1,7 @@
 a{
     color: #FF8400;
     text-decoration: none;
+    transition: all 200ms ease-in-out;
 }
 
 a:hover{
