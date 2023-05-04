@@ -25,10 +25,11 @@ export default function WeatherInfo(props) {
         <div className="col-6">
           <ul className="current-weather-details">
             <WeatherTemperature celsius={props.details.temperature} />
-            
             <li>
               Description:{" "}
-              <span id="weather-description" className="text-capitalize">{props.details.description}</span>
+              <span id="weather-description" className="text-capitalize">
+                {props.details.description}
+              </span>
             </li>
             <li>
               <img src={props.details.icon} alt={props.details.description} />
