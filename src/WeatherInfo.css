@@ -8,10 +8,9 @@ a:hover{
     color: #faebd7;
 }
 
-.common-cities{
-    margin-top: 10px;
+.city-side{
+    margin-left: 30px;
 }
-
 .current-weather-details {
     text-align: center;
     list-style-type: none;

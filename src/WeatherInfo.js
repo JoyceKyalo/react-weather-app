@@ -7,22 +7,11 @@ export default function WeatherInfo(props) {
   return (
     <div>
       <div className="row">
-        <div className="col-6">
-          <div className="row common-cities">
-            <div className="col-4">
-              <a href="/">New York</a>
-            </div>
-            <div className="col-3 paris-city">
-              <a href="/">Paris</a>
-            </div>
-            <div className="col-5">
-              <a href="/">Shanghai</a>
-            </div>
-          </div>
+        <div className="col city-side">
           <h1>{props.details.city}</h1>
           <UserDate date={props.details.date} />
         </div>
-        <div className="col-6">
+        <div className="col">
           <ul className="current-weather-details">
             <WeatherTemperature celsius={props.details.temperature} />
             <li>
