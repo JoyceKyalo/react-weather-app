@@ -19,7 +19,6 @@ export default function Weather(props) {
   }
 
   function handleResponse(response) {
-    console.log(response);
     setWeatherDetails({
       ready: true,
       temperature: response.data.temperature.current,
