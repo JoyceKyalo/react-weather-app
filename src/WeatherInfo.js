@@ -8,13 +8,13 @@ export default function WeatherInfo(props) {
       <div className="row">
         <div className="col-6">
           <div className="row common-cities">
-            <div class="col-4">
+            <div className="col-4">
               <a href="/">New York</a>
             </div>
-            <div class="col-3 paris-city">
+            <div className="col-3 paris-city">
               <a href="/">Paris</a>
             </div>
-            <div class="col-5">
+            <div className="col-5">
               <a href="/">Shanghai</a>
             </div>
           </div>
@@ -29,7 +29,7 @@ export default function WeatherInfo(props) {
               <span id="weather-description" className="text-capitalize">{props.details.description}</span>
             </li>
             <li>
-              <img src={props.details.icon} alt={props.details.icon} />
+              <img src={props.details.icon} alt={props.details.description} />
             </li>
           </ul>
         </div>

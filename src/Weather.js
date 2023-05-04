@@ -13,19 +13,20 @@ export default function Weather(props) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    let apiKey = "2d5c28f46f35496c26b3294dfcae8329";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    let apiKey = "0534b4bf77df82f13f307a8bcbtddo1d";
+    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
     axios.get(apiUrl).then(handleResponse);
   }
 
   function handleResponse(response) {
+    console.log(response);
     setWeatherDetails({
       ready: true,
-      temperature: response.data.main.temp,
-      description: response.data.weather[0].description,
-      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
-      date: new Date(response.data.dt * 1000),
-      city: response.data.name,
+      temperature: response.data.temperature.current,
+      description: response.data.condition.description,
+      icon: response.data.condition.icon_url,
+      date: new Date(response.data.time * 1000),
+      city: response.data.city,
     });
   }
 
@@ -50,8 +51,8 @@ export default function Weather(props) {
       </div>
     );
   } else {
-    let apiKey = "2d5c28f46f35496c26b3294dfcae8329";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    let apiKey = "0534b4bf77df82f13f307a8bcbtddo1d";
+    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
     axios.get(apiUrl).then(handleResponse);
     return <div>Loading...</div>;
   }
