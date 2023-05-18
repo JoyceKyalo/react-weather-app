@@ -1,19 +1,24 @@
-a{
-    color: #FF8400;
-    text-decoration: none;
-    transition: all 200ms ease-in-out;
+a {
+  color: #ff8400;
+  text-decoration: none;
+  transition: all 200ms ease-in-out;
 }
 
-a:hover{
-    color: #faebd7;
+a:hover {
+  color: #faebd7;
 }
 
-.city-side{
-    margin-left: 30px;
+.city-side {
+  margin-left: 30px;
 }
 .current-weather-details {
-    text-align: center;
-    list-style-type: none;
-    margin-top: 10px;
-    margin-left: 30px;
-  }
+  text-align: center;
+  list-style-type: none;
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
+.WeatherInfo-icon {
+  width: 160px;
+  margin-top: -35px;
+}
