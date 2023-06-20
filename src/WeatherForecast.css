@@ -1,6 +1,11 @@
+span{
+    margin-left: 10px;
+}
+
 .WeatherForecast-icon{
     width: 120px;
-    margin-top: -25px;
+    margin-top: -20px;
+    margin-bottom: -15px;
 }
 
 .WeatherForecast{
