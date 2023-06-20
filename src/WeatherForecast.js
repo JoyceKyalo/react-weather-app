@@ -4,7 +4,8 @@ import "./WeatherForecast.css";
 import WeatherForecastData from "./WeatherForecastData";
 
 export default function WeatherForecast(props) {
-  let city = props.details.city;
+  console.log(props);
+  let city = props.city;
   let [forecastData, setForecastData] = useState(null);
   let [loaded, setLoaded] = useState(false);
 
