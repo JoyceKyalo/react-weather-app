@@ -9,7 +9,7 @@ export default function WeatherInfo(props) {
       <div className="row">
         <div className="col city-side">
           <h1>{props.details.city}</h1>
-          <UserDate date={props.details.date} />
+         <UserDate date={props.details.date} />
         </div>
         <div className="col">
           <ul className="current-weather-details">
