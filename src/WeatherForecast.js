@@ -24,7 +24,7 @@ useEffect(() =>{
       <div className="WeatherForecast">
         <div className="row">
           {forecastData.map(function (dailyForecast, index) {
-            if (index < 5) {
+            if (index > 0) {
               return (
                 <div className="col" key={index}>
                   <WeatherForecastData data={dailyForecast} />
